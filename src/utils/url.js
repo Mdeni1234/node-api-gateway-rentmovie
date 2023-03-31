@@ -1,3 +1,3 @@
-const userUrl = `https://rent-book-api-user.vercel.app`;
+const userUrl = `https://node-api-user-rent-movie.vercel.app/`;
 
 module.exports = userUrl;
