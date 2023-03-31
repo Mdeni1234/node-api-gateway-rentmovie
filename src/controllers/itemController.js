@@ -56,7 +56,7 @@ const deleteItem = async (req,res) => {
 
 const getItem = async (req, res) => {
     try {
-        const response = await axios.get(`https://rent-book-api-user.vercel.app/item`);
+        const response = await axios.get(`https://node-api-user-rent-movie.vercel.app/item`);
         res.json(response.data);
     } catch(err) {
         console.log(err);
@@ -68,7 +68,7 @@ const getItemById = async (req, res) => {
     let {id} = req.params;
     id = Number(id);
     try {
-        const response = await axios.get(`https://rent-book-api-user.vercel.app/item/${id}`);
+        const response = await axios.get(`https://node-api-user-rent-movie.vercel.app/item/${id}`);
         res.json(response.data);
     } catch(err) {
         console.log(err);
@@ -80,7 +80,7 @@ const getItemByCategory = async (req, res) => {
     let {category} = req.params;
     try {
         if (category !== 'movie' && category !== 'book') throw {message: "invalid category"}
-        const response = await axios.get(`https://rent-book-api-user.vercel.app/item-category/${category}` );
+        const response = await axios.get(`https://node-api-user-rent-movie.vercel.app/item-category/${category}` );
         res.json(response.data);
     } catch(err) {
         console.log(err);

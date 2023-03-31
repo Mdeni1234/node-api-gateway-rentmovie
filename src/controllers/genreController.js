@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken')
 
 const getGenreAll = async (req,res) => {
     try {
-        const response = await axios.get(`https://rent-book-api-user.vercel.app/genre` );
+        const response = await axios.get(`https://node-api-user-rent-movie.vercel.app/genre` );
         res.json(response.data);
     } catch(err) {
         console.error(err);
@@ -15,7 +15,7 @@ const getGenreAll = async (req,res) => {
 const getGenreById = async (req,res) => {
     let {id} = req.params;
     try {
-        const response = await axios.get(`https://rent-book-api-user.vercel.app/genre/${id}` );
+        const response = await axios.get(`https://node-api-user-rent-movie.vercel.app/genre/${id}` );
         res.json(response.data);
     } catch(err) {
         console.error(err);
@@ -76,7 +76,7 @@ const deleteGenre = async (req,res) => {
 // const getProfileByUserId = async (req,res) => {
 //     try {
 //         const decodedToken = jwt.verify(req.token, process.env.TOKEN_SECRET)
-//         const response = await axios.get(`https://rent-book-api-user.vercel.app/profile`,
+//         const response = await axios.get(`https://node-api-user-rent-movie.vercel.app/profile`,
 //         {
 //           headers: {
 //             "Authorization": `Bearer ${req.token}`
