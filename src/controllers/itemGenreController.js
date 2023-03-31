@@ -1,7 +1,4 @@
 const axios = require("axios");
-const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient();
-
 const getItemGenre = async (req, res) => {
     try {
         const response = await axios.get(
