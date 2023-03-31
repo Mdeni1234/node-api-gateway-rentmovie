@@ -3,7 +3,7 @@ const { json } = require('express')
 
 const getAllUsers = async (req, res) => {
     try {
-        const response = await axios.get('https://rent-book-api-admin.vercel.app/admin/user',{
+        const response = await axios.get('https://node-api-admin-rentmovie.vercel.app/admin/user',{
             headers: {
                 "Authorization" : `Bearer ${req.token}`
             }
@@ -17,7 +17,7 @@ const getAllUsers = async (req, res) => {
 const getUserById = async (req, res) => {
     let { userId } = req.params
     try {
-        const response = await axios.get(`https://rent-book-api-admin.vercel.app/admin/user/${userId}`,{
+        const response = await axios.get(`https://node-api-admin-rentmovie.vercel.app/admin/user/${userId}`,{
             headers: {
                 "Authorization" : `Bearer ${req.token}`
             }
@@ -32,7 +32,7 @@ const getUserById = async (req, res) => {
 const deleteUserById = async (req, res) => {
     let { userId } = req.params
     try {
-        const response = await axios.delete(`https://rent-book-api-admin.vercel.app/admin/user/${userId}`,{
+        const response = await axios.delete(`https://node-api-admin-rentmovie.vercel.app/admin/user/${userId}`,{
             headers: {
                 "Authorization" : `Bearer ${req.token}`
             }

@@ -2,7 +2,7 @@ const axios = require('axios')
 
 const getAllUserProfile = async (req, res) => {
     try {
-        const response = await axios.get(`https://rent-book-api-admin.vercel.app/admin/user-profile`,{
+        const response = await axios.get(`https://node-api-admin-rentmovie.vercel.app/admin/user-profile`,{
             headers: {
                 Authorization : `Bearer ${req.token}`
             }
@@ -22,7 +22,7 @@ const getProfileByUserId = async (req, res) => {
 
         if(isNaN(userId) || typeof userId === 'string') throw new Error(`Id must be a number`)
 
-        const response = await axios.get(`https://rent-book-api-admin.vercel.app/admin/user-profile/${userId}`)
+        const response = await axios.get(`https://node-api-admin-rentmovie.vercel.app/admin/user-profile/${userId}`)
 
         if(response.length === 0) throw new Error(`Profile with id ${userId} not found`)
 

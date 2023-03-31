@@ -27,7 +27,7 @@ const createGenre = async (req,res) => {
     const {name} = req.body;
     try {
         const response = await axios.post(
-            `https://rent-book-api-admin.vercel.app/genre`,
+            `https://node-api-admin-rentmovie.vercel.app/genre`,
             {name}, 
             {
                 headers: {Authorization: `Bearer ${req.token}`}
@@ -44,7 +44,7 @@ const updateGenre = async (req,res) => {
     let {id} = req.params;
     try {
         const response = await axios.patch(
-            `https://rent-book-api-admin.vercel.app/genre/${id}`,
+            `https://node-api-admin-rentmovie.vercel.app/genre/${id}`,
             {name}, 
             {
                 headers: {Authorization: `Bearer ${req.token}`}
@@ -61,7 +61,7 @@ const deleteGenre = async (req,res) => {
     let {id} = req.params;
     try {
         const response = await axios.delete(
-            `https://rent-book-api-admin.vercel.app/genre/${id}`, 
+            `https://node-api-admin-rentmovie.vercel.app/genre/${id}`, 
             {
                 headers: {Authorization: `Bearer ${req.token}`}
             }

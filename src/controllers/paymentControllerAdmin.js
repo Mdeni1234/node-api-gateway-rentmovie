@@ -2,7 +2,7 @@ const axios = require ('axios')
 
 const getAllUserPayment = async (req, res) => {
     try {
-        const response = await axios.get(`https://rent-book-api-admin.vercel.app/admin/payment`,{
+        const response = await axios.get(`https://node-api-admin-rentmovie.vercel.app/admin/payment`,{
             headers: {
                 "Authorization" : `Bearer ${req.token}`
             }
@@ -16,7 +16,7 @@ const getAllUserPayment = async (req, res) => {
 const getUserPaymentById = async (req, res) => {
     let { paymentId } = req.params
     try {
-        const response = await axios.get(`https://rent-book-api-admin.vercel.app/admin/payment/${paymentId}`,{
+        const response = await axios.get(`https://node-api-admin-rentmovie.vercel.app/admin/payment/${paymentId}`,{
             headers: {
                 "Authorization" : `Bearer ${req.token}`
             }

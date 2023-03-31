@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 const getItemGenre = async (req, res) => {
     try {
         const response = await axios.get(
-            `https://rent-book-api-admin.vercel.app/item-genre`,
+            `https://node-api-admin-rentmovie.vercel.app/item-genre`,
             {
                 headers: {
                   "Authorization": `Bearer ${req.token}`
@@ -24,7 +24,7 @@ const setGenre = async (req, res) => {
     const {genre_id} = req.body;
     try {
         const response = await axios.post(
-            `https://rent-book-api-admin.vercel.app/item/${item_id}/set-genre`,
+            `https://node-api-admin-rentmovie.vercel.app/item/${item_id}/set-genre`,
             {genre_id}, {
                 headers: {
                   "Authorization": `Bearer ${req.token}`

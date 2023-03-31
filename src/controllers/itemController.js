@@ -4,7 +4,7 @@ const createItem = async (req,res) => {
     const item_properties = req.body;
     try {
         const response = await axios.post(
-            "https://rent-book-api-admin.vercel.app/item",
+            "https://node-api-admin-rentmovie.vercel.app/item",
             item_properties, {
                 headers: {
                   "Authorization": `Bearer ${req.token}`
@@ -24,7 +24,7 @@ const updateItem = async (req,res) => {
     const item_properties = req.body;
     try {
         const response = await axios.patch(
-            `https://rent-book-api-admin.vercel.app/item/${id}`,
+            `https://node-api-admin-rentmovie.vercel.app/item/${id}`,
             item_properties, {
                 headers: {
                   "Authorization": `Bearer ${req.token}`
@@ -42,7 +42,7 @@ const deleteItem = async (req,res) => {
     id = Number(id);
     try {
         const response = await axios.delete(
-            `https://rent-book-api-admin.vercel.app/item/${id}`, {
+            `https://node-api-admin-rentmovie.vercel.app/item/${id}`, {
             headers: {
                 "Authorization": `Bearer ${req.token}`
             } }
